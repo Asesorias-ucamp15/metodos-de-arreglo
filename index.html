@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <ul id="lista">
+
+  </ul>
+  <script>
+    const listaAlumnos = ["Jorge", "Ana", "Adrian", "Manuel", "Rebeca"]
+    const calificaciones = [12, 15, 17, 10, 10, 15, 16, 17]
+    // console.log(listaAlumnos.length)
+    // console.log(calificaciones)
+      
+    // const lista = document.getElementById("lista")
+    // lista.appendChild(li)
+
+    listaAlumnos.map((alumno) => {
+      console.log(alumno)
+    })
+
+    calificaciones.forEach((calificacion) => {
+      console.log(calificacion)
+    })
+
+    const array3 = listaAlumnos.concat(calificaciones)
+
+    console.log(array3)
+
+    const aprobados = array3.find(element => element >= 10)
+
+    console.log(aprobados)
+
+    const aproba2 = array3.filter(element => element >= 10)
+
+    console.log(aproba2)
+    
+    listaAlumnos.push("Roberto")
+
+    console.log(listaAlumnos)
+
+    listaAlumnos.pop()
+
+    console.log(listaAlumnos)
+
+    const array1 = [1, 2, 3, 4, 6, 7, 8];
+
+    // 0 + 1 + 2 + 3 + 4
+    const initialValue = 0;
+    const sumWithInitial = array1.reduce(
+      (accumulator, currentValue) => accumulator + currentValue,
+      initialValue
+    );
+
+    console.log(sumWithInitial);
+
+    const arrReverse = array1.reverse()
+    console.log(arrReverse)
+
+    const arrSort = calificaciones.sort()
+    console.log(arrSort)
+
+    const arrToString = calificaciones.toString()
+    console.log(arrToString)
+
+    const animals = ['ant', 'bison', 'camel', 'duck', 'elephant'];
+    console.log(animals.slice(0, 3))
+    const animalsJiraffe = animals.splice(2, 1, "jirafa")
+    console.log(animals.join(', '))
+
+    console.log(animals)
+    const variable = 15
+    console.log(`yo tengo esta cantidad de ${variable}`)
+
+    console.log('yo tengo esta cantidad de ' + variable)
+
+  </script>
+</body>
+</html>
